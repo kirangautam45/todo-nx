@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
-import { Todo } from '../state/recoil/atoms';
+import { Todo } from 'src/types/Todo';
 
-const useAutoScroll = (dependencies: Todo[] = []) => {
+const useAutoScroll = (todoList: Todo[] = []) => {
   // Explicitly type the ref as an HTML element or null
   const lastElementRef = useRef<HTMLDivElement | null>(null);
 
@@ -12,7 +12,7 @@ const useAutoScroll = (dependencies: Todo[] = []) => {
         block: 'end',
       });
     }
-  }, [dependencies]); // Trigger the scroll when dependencies change (like todoList)
+  }, [todoList]);
 
   return lastElementRef;
 };

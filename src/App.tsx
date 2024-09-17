@@ -6,6 +6,7 @@ import { todoListState } from './component/state/recoil/atoms';
 import { motion } from 'framer-motion';
 import useTodoAnimations from './component/hooks/useTodoAnimations';
 import useAutoScroll from './component/hooks/useAutoScroll';
+import { Todo } from './types/Todo';
 
 function App() {
   const { container, item } = useTodoAnimations();
@@ -15,7 +16,7 @@ function App() {
   const lastTodoRef = useAutoScroll(todoList);
 
   const toggleComplete = (id: string) => {
-    setTodoList((oldTodoList) =>
+    setTodoList((oldTodoList: Todo[]) =>
       oldTodoList.map((todo) =>
         todo.id === id ? { ...todo, isComplete: !todo.isComplete } : todo
       )
@@ -37,7 +38,7 @@ function App() {
         initial="hidden"
         animate="visible"
       >
-        {todoList.map((todo, index) => (
+        {todoList.map((todo: Todo, index: number) => (
           <motion.div
             key={todo.id}
             variants={item}

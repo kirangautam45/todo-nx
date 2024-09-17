@@ -1,10 +1,5 @@
-import { atom } from 'recoil'
-
-export type Todo = {
-  id: string
-  text: string
-  isComplete: boolean
-}
+import { atom } from 'recoil';
+import { Todo } from 'src/types/Todo';
 
 export const todoListState = atom<Todo[]>({
   key: 'todoListState',
@@ -13,4 +8,4 @@ export const todoListState = atom<Todo[]>({
     { id: '2', text: 'Eggs', isComplete: false },
     { id: '3', text: 'Cheese', isComplete: false },
   ],
-})
+});

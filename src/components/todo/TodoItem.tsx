@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import useTodoAnimations from '../hooks/useTodoAnimations';
+import useTodoAnimations from '../../hooks/useTodoAnimations';
 
 type TodoItemProps = {
   text: string;

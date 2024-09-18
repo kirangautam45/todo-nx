@@ -1,11 +1,11 @@
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import './index.css';
-import TodoItem from './component/todo/TodoItem';
-import AddTodo from './component/todo/AddTodo';
-import { todoListState } from './component/state/recoil/atoms';
+import TodoItem from './components/todo/TodoItem';
+import AddTodo from './components/todo/AddTodo';
+import { todoListState } from './state/recoil/atoms';
 import { motion } from 'framer-motion';
-import useTodoAnimations from './component/hooks/useTodoAnimations';
-import useAutoScroll from './component/hooks/useAutoScroll';
+import useTodoAnimations from './hooks/useTodoAnimations';
+import useAutoScroll from './hooks/useAutoScroll';
 import { Todo } from './types/Todo';
 
 function App() {

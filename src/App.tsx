@@ -28,12 +28,12 @@ function App() {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto max-h-4/6 overflow-y-auto overflow-x-hidden ">
       <h1 className="flex mt-20 mb-10 lg:justify-start justify-center text-3xl font-bold text-black my-4">
         ToDo List
       </h1>
       <motion.div
-        className="todo-list"
+        className=""
         variants={container}
         initial="hidden"
         animate="visible"

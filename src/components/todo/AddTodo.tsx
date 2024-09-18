@@ -40,7 +40,7 @@ const AddTodo = () => {
 
   return (
     <>
-      <div className="flex flex-row items-center lg:w-1/2 w-full m-2 mt-4 p-2 border-y mb-10">
+      <div className="flex flex-row items-center lg:w-1/2 w-full m-2 mt-4 p-2 border-y mb-20 ">
         <div className="size-6 mr-4 border-2 border-purple-600 bg-purple-600 rounded-full flex items-center justify-center">
           <span className="flex items-center justify-center text-3xl font-bold mb-1 text-white">
             +
@@ -53,12 +53,12 @@ const AddTodo = () => {
           value={inputValue}
           onKeyDown={handleKeyPress}
           onChange={handleChange}
-          className=" p-2 lg:w-full w-10/12 focus:outline-none active:outline-none text-[16px] "
+          className=" p-2 lg:w-full w-9/12  outline-none focus:outline-none active:outline-none text-[16px] "
           placeholder="memorize the dictionary"
         />
 
         <button
-          className="bg-purple-600 w-[140px] text-white px-4 py-2 rounded font-semibold text-[14px]"
+          className="bg-purple-600 w-[130px] text-white px-4 py-2 mr-1 rounded font-semibold text-[14px]"
           onClick={addItem}
         >
           Add Items
